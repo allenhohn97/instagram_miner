@@ -1,0 +1,13 @@
+{% extends 'ig_miner_app/base.html' %}
+
+<!-- Renders a form based on the Campaign model -->
+{% block content %}
+	<div class="form col-lg-4 col-lg-offset-4" >
+	    <h1>New Campaign</h1>
+	    <form method="POST" class="post-form">{% csrf_token %}
+	        {{ form.as_p }}
+	        <button type="submit" class="save btn btn-default">Find photos!</button>
+	    </form>
+	    <i>Please be patient. This could take awhile!</i>
+	</div>
+{% endblock %}
